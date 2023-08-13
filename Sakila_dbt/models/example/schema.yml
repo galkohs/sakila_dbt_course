@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+            
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: hello_world
+    description: "A starter dbt model"
+    columns:
+      - name: customer_id
+        description: "The primery key for this table"
+        tests:
+          - unique
+          - not_null          
+
+  - name: customer_test_macro
+    description: "customer_test_macro"
+    columns:
+      - name: customer_id
+        description: "The primary key for this table"
+        tests:
+          - unique   
+  
+  - name: payment_inc
+    description: "payment_inc"
+    columns:
+      - name: payment_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null   
+
